@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+:root {
+  --color-footer: #a9a9a9;
+  --color-background: #ffffff;
+
+  --font-mo: "Montserrat", sans-serif;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 90%;
+  margin: var(--space-md) auto;
+}
+
+/* Info */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.info .avatar {
+  border-radius: 1rem;
+  width: 25%;
+}
+
+.info .name {
+  color: #4e5150;
+  font-family: var(--font-mo);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.info .location {
+  color: #a9a9a9;
+  font-family: var(--font-mo);
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+
+.info .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.info .cards .card {
+  background-color: #e5e5e5;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.info .cards .card .amount {
+  color: #4e5150;
+  font-family: var(--font-mo);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.info .cards .card .title {
+  color: #bdbdbd;
+  font-family: var(--font-mo);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* Images */
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.images img {
+  border-radius: 1rem;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.images img:nth-child(1) {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.images img:nth-child(2) {
+  grid-column: 2 / span 2;
+  grid-row: 1 / 1;
+}
+
+.images img:nth-child(3) {
+  grid-column: 1 / span 2;
+  grid-row: 2 / 2;
+}
+
+.images img:nth-child(4) {
+  grid-column: 3 / 3;
+  grid-row: 2 / span 2;
+}
+
+.images img:nth-child(5) {
+  grid-column: 1 / 1;
+  grid-row: 3 / 3;
+}
+
+.images img:nth-child(6) {
+  grid-column: 3 / 2;
+  grid-row: 3 / 3;
+}
+
+/* Footer */
+
+.footer * {
+  color: var(--color-footer);
+  font-family: var(--font-mo);
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 65%;
+    gap: var(--space-xxl);
+  }
+
+  .info {
+    gap: var(--space-md);
+  }
+
+  .info .cards {
+    gap: var(--space-md);
+  }
+
+  .images {
+    gap: var(--space-md);
+  }
+}
